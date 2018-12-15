@@ -2,7 +2,7 @@
 //  ShutterToolTests.swift
 //  ShutterToolTests
 //
-//  Created by Joshua Lizak on 11/26/18.
+//  Created by Joshua Lizak on 12/7/18.
 //  Copyright © 2018 Joshua Lizak. All rights reserved.
 //
 

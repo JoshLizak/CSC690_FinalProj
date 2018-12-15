@@ -7,46 +7,54 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F124484D21AD138200164654 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F124484C21AD138200164654 /* AppDelegate.swift */; };
-		F124484F21AD138200164654 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F124484E21AD138200164654 /* ViewController.swift */; };
-		F124485221AD138200164654 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F124485021AD138200164654 /* Main.storyboard */; };
-		F124485421AD138300164654 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F124485321AD138300164654 /* Assets.xcassets */; };
-		F124485721AD138300164654 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F124485521AD138300164654 /* LaunchScreen.storyboard */; };
-		F124486221AD138400164654 /* ShutterToolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F124486121AD138400164654 /* ShutterToolTests.swift */; };
+		F17E2B4221C4DB71003E615B /* LocationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17E2B4121C4DB71003E615B /* LocationsController.swift */; };
+		F1B27BAE21C335A3006C90BA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B27BAD21C335A3006C90BA /* TabBarController.swift */; };
+		F1FC16F621BB1C4A00FDEDE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FC16F521BB1C4A00FDEDE5 /* AppDelegate.swift */; };
+		F1FC16F821BB1C4A00FDEDE5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FC16F721BB1C4A00FDEDE5 /* HomeViewController.swift */; };
+		F1FC16FA21BB1C4A00FDEDE5 /* ShutterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FC16F921BB1C4A00FDEDE5 /* ShutterViewController.swift */; };
+		F1FC16FD21BB1C4A00FDEDE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1FC16FB21BB1C4A00FDEDE5 /* Main.storyboard */; };
+		F1FC16FF21BB1C4C00FDEDE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1FC16FE21BB1C4C00FDEDE5 /* Assets.xcassets */; };
+		F1FC170221BB1C4C00FDEDE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1FC170021BB1C4C00FDEDE5 /* LaunchScreen.storyboard */; };
+		F1FC170D21BB1C4C00FDEDE5 /* ShutterToolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FC170C21BB1C4C00FDEDE5 /* ShutterToolTests.swift */; };
+		F1FC171821BB1CE400FDEDE5 /* MyLocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FC171721BB1CE400FDEDE5 /* MyLocationsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F124485E21AD138400164654 /* PBXContainerItemProxy */ = {
+		F1FC170921BB1C4C00FDEDE5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F124484121AD138200164654 /* Project object */;
+			containerPortal = F1FC16EA21BB1C4A00FDEDE5 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F124484821AD138200164654;
+			remoteGlobalIDString = F1FC16F121BB1C4A00FDEDE5;
 			remoteInfo = ShutterTool;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F124484921AD138200164654 /* ShutterTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShutterTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F124484C21AD138200164654 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F124484E21AD138200164654 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F124485121AD138200164654 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F124485321AD138300164654 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F124485621AD138300164654 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F124485821AD138300164654 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F124485D21AD138400164654 /* ShutterToolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShutterToolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F124486121AD138400164654 /* ShutterToolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShutterToolTests.swift; sourceTree = "<group>"; };
-		F124486321AD138400164654 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F17E2B4121C4DB71003E615B /* LocationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsController.swift; sourceTree = "<group>"; };
+		F1B27BAD21C335A3006C90BA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		F1FC16F221BB1C4A00FDEDE5 /* ShutterTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShutterTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1FC16F521BB1C4A00FDEDE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F1FC16F721BB1C4A00FDEDE5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F1FC16F921BB1C4A00FDEDE5 /* ShutterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShutterViewController.swift; sourceTree = "<group>"; };
+		F1FC16FC21BB1C4A00FDEDE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F1FC16FE21BB1C4C00FDEDE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F1FC170121BB1C4C00FDEDE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F1FC170321BB1C4C00FDEDE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1FC170821BB1C4C00FDEDE5 /* ShutterToolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShutterToolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1FC170C21BB1C4C00FDEDE5 /* ShutterToolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShutterToolTests.swift; sourceTree = "<group>"; };
+		F1FC170E21BB1C4C00FDEDE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1FC171721BB1CE400FDEDE5 /* MyLocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLocationsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F124484621AD138200164654 /* Frameworks */ = {
+		F1FC16EF21BB1C4A00FDEDE5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F124485A21AD138400164654 /* Frameworks */ = {
+		F1FC170521BB1C4C00FDEDE5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -56,42 +64,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F124484021AD138200164654 = {
+		F1FC16E921BB1C4A00FDEDE5 = {
 			isa = PBXGroup;
 			children = (
-				F124484B21AD138200164654 /* ShutterTool */,
-				F124486021AD138400164654 /* ShutterToolTests */,
-				F124484A21AD138200164654 /* Products */,
+				F1FC16F421BB1C4A00FDEDE5 /* ShutterTool */,
+				F1FC170B21BB1C4C00FDEDE5 /* ShutterToolTests */,
+				F1FC16F321BB1C4A00FDEDE5 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		F124484A21AD138200164654 /* Products */ = {
+		F1FC16F321BB1C4A00FDEDE5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F124484921AD138200164654 /* ShutterTool.app */,
-				F124485D21AD138400164654 /* ShutterToolTests.xctest */,
+				F1FC16F221BB1C4A00FDEDE5 /* ShutterTool.app */,
+				F1FC170821BB1C4C00FDEDE5 /* ShutterToolTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F124484B21AD138200164654 /* ShutterTool */ = {
+		F1FC16F421BB1C4A00FDEDE5 /* ShutterTool */ = {
 			isa = PBXGroup;
 			children = (
-				F124484C21AD138200164654 /* AppDelegate.swift */,
-				F124484E21AD138200164654 /* ViewController.swift */,
-				F124485021AD138200164654 /* Main.storyboard */,
-				F124485321AD138300164654 /* Assets.xcassets */,
-				F124485521AD138300164654 /* LaunchScreen.storyboard */,
-				F124485821AD138300164654 /* Info.plist */,
+				F1FC16F521BB1C4A00FDEDE5 /* AppDelegate.swift */,
+				F1FC16F721BB1C4A00FDEDE5 /* HomeViewController.swift */,
+				F17E2B4121C4DB71003E615B /* LocationsController.swift */,
+				F1FC16F921BB1C4A00FDEDE5 /* ShutterViewController.swift */,
+				F1FC171721BB1CE400FDEDE5 /* MyLocationsViewController.swift */,
+				F1B27BAD21C335A3006C90BA /* TabBarController.swift */,
+				F1FC16FB21BB1C4A00FDEDE5 /* Main.storyboard */,
+				F1FC16FE21BB1C4C00FDEDE5 /* Assets.xcassets */,
+				F1FC170021BB1C4C00FDEDE5 /* LaunchScreen.storyboard */,
+				F1FC170321BB1C4C00FDEDE5 /* Info.plist */,
 			);
 			path = ShutterTool;
 			sourceTree = "<group>";
 		};
-		F124486021AD138400164654 /* ShutterToolTests */ = {
+		F1FC170B21BB1C4C00FDEDE5 /* ShutterToolTests */ = {
 			isa = PBXGroup;
 			children = (
-				F124486121AD138400164654 /* ShutterToolTests.swift */,
-				F124486321AD138400164654 /* Info.plist */,
+				F1FC170C21BB1C4C00FDEDE5 /* ShutterToolTests.swift */,
+				F1FC170E21BB1C4C00FDEDE5 /* Info.plist */,
 			);
 			path = ShutterToolTests;
 			sourceTree = "<group>";
@@ -99,13 +111,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F124484821AD138200164654 /* ShutterTool */ = {
+		F1FC16F121BB1C4A00FDEDE5 /* ShutterTool */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F124486621AD138400164654 /* Build configuration list for PBXNativeTarget "ShutterTool" */;
+			buildConfigurationList = F1FC171121BB1C4C00FDEDE5 /* Build configuration list for PBXNativeTarget "ShutterTool" */;
 			buildPhases = (
-				F124484521AD138200164654 /* Sources */,
-				F124484621AD138200164654 /* Frameworks */,
-				F124484721AD138200164654 /* Resources */,
+				F1FC16EE21BB1C4A00FDEDE5 /* Sources */,
+				F1FC16EF21BB1C4A00FDEDE5 /* Frameworks */,
+				F1FC16F021BB1C4A00FDEDE5 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -113,47 +125,47 @@
 			);
 			name = ShutterTool;
 			productName = ShutterTool;
-			productReference = F124484921AD138200164654 /* ShutterTool.app */;
+			productReference = F1FC16F221BB1C4A00FDEDE5 /* ShutterTool.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F124485C21AD138400164654 /* ShutterToolTests */ = {
+		F1FC170721BB1C4C00FDEDE5 /* ShutterToolTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F124486921AD138400164654 /* Build configuration list for PBXNativeTarget "ShutterToolTests" */;
+			buildConfigurationList = F1FC171421BB1C4C00FDEDE5 /* Build configuration list for PBXNativeTarget "ShutterToolTests" */;
 			buildPhases = (
-				F124485921AD138400164654 /* Sources */,
-				F124485A21AD138400164654 /* Frameworks */,
-				F124485B21AD138400164654 /* Resources */,
+				F1FC170421BB1C4C00FDEDE5 /* Sources */,
+				F1FC170521BB1C4C00FDEDE5 /* Frameworks */,
+				F1FC170621BB1C4C00FDEDE5 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F124485F21AD138400164654 /* PBXTargetDependency */,
+				F1FC170A21BB1C4C00FDEDE5 /* PBXTargetDependency */,
 			);
 			name = ShutterToolTests;
 			productName = ShutterToolTests;
-			productReference = F124485D21AD138400164654 /* ShutterToolTests.xctest */;
+			productReference = F1FC170821BB1C4C00FDEDE5 /* ShutterToolTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F124484121AD138200164654 /* Project object */ = {
+		F1FC16EA21BB1C4A00FDEDE5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Joshua Lizak";
 				TargetAttributes = {
-					F124484821AD138200164654 = {
+					F1FC16F121BB1C4A00FDEDE5 = {
 						CreatedOnToolsVersion = 10.1;
 					};
-					F124485C21AD138400164654 = {
+					F1FC170721BB1C4C00FDEDE5 = {
 						CreatedOnToolsVersion = 10.1;
-						TestTargetID = F124484821AD138200164654;
+						TestTargetID = F1FC16F121BB1C4A00FDEDE5;
 					};
 				};
 			};
-			buildConfigurationList = F124484421AD138200164654 /* Build configuration list for PBXProject "ShutterTool" */;
+			buildConfigurationList = F1FC16ED21BB1C4A00FDEDE5 /* Build configuration list for PBXProject "ShutterTool" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -161,29 +173,29 @@
 				en,
 				Base,
 			);
-			mainGroup = F124484021AD138200164654;
-			productRefGroup = F124484A21AD138200164654 /* Products */;
+			mainGroup = F1FC16E921BB1C4A00FDEDE5;
+			productRefGroup = F1FC16F321BB1C4A00FDEDE5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F124484821AD138200164654 /* ShutterTool */,
-				F124485C21AD138400164654 /* ShutterToolTests */,
+				F1FC16F121BB1C4A00FDEDE5 /* ShutterTool */,
+				F1FC170721BB1C4C00FDEDE5 /* ShutterToolTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F124484721AD138200164654 /* Resources */ = {
+		F1FC16F021BB1C4A00FDEDE5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F124485721AD138300164654 /* LaunchScreen.storyboard in Resources */,
-				F124485421AD138300164654 /* Assets.xcassets in Resources */,
-				F124485221AD138200164654 /* Main.storyboard in Resources */,
+				F1FC170221BB1C4C00FDEDE5 /* LaunchScreen.storyboard in Resources */,
+				F1FC16FF21BB1C4C00FDEDE5 /* Assets.xcassets in Resources */,
+				F1FC16FD21BB1C4A00FDEDE5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F124485B21AD138400164654 /* Resources */ = {
+		F1FC170621BB1C4C00FDEDE5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -193,46 +205,50 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F124484521AD138200164654 /* Sources */ = {
+		F1FC16EE21BB1C4A00FDEDE5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F124484F21AD138200164654 /* ViewController.swift in Sources */,
-				F124484D21AD138200164654 /* AppDelegate.swift in Sources */,
+				F1FC16FA21BB1C4A00FDEDE5 /* ShutterViewController.swift in Sources */,
+				F1FC16F621BB1C4A00FDEDE5 /* AppDelegate.swift in Sources */,
+				F17E2B4221C4DB71003E615B /* LocationsController.swift in Sources */,
+				F1FC16F821BB1C4A00FDEDE5 /* HomeViewController.swift in Sources */,
+				F1B27BAE21C335A3006C90BA /* TabBarController.swift in Sources */,
+				F1FC171821BB1CE400FDEDE5 /* MyLocationsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F124485921AD138400164654 /* Sources */ = {
+		F1FC170421BB1C4C00FDEDE5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F124486221AD138400164654 /* ShutterToolTests.swift in Sources */,
+				F1FC170D21BB1C4C00FDEDE5 /* ShutterToolTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F124485F21AD138400164654 /* PBXTargetDependency */ = {
+		F1FC170A21BB1C4C00FDEDE5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F124484821AD138200164654 /* ShutterTool */;
-			targetProxy = F124485E21AD138400164654 /* PBXContainerItemProxy */;
+			target = F1FC16F121BB1C4A00FDEDE5 /* ShutterTool */;
+			targetProxy = F1FC170921BB1C4C00FDEDE5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F124485021AD138200164654 /* Main.storyboard */ = {
+		F1FC16FB21BB1C4A00FDEDE5 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F124485121AD138200164654 /* Base */,
+				F1FC16FC21BB1C4A00FDEDE5 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		F124485521AD138300164654 /* LaunchScreen.storyboard */ = {
+		F1FC170021BB1C4C00FDEDE5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F124485621AD138300164654 /* Base */,
+				F1FC170121BB1C4C00FDEDE5 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -240,7 +256,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		F124486421AD138400164654 /* Debug */ = {
+		F1FC170F21BB1C4C00FDEDE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -301,7 +317,7 @@
 			};
 			name = Debug;
 		};
-		F124486521AD138400164654 /* Release */ = {
+		F1FC171021BB1C4C00FDEDE5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -356,7 +372,7 @@
 			};
 			name = Release;
 		};
-		F124486721AD138400164654 /* Debug */ = {
+		F1FC171221BB1C4C00FDEDE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -374,7 +390,7 @@
 			};
 			name = Debug;
 		};
-		F124486821AD138400164654 /* Release */ = {
+		F1FC171321BB1C4C00FDEDE5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -392,7 +408,7 @@
 			};
 			name = Release;
 		};
-		F124486A21AD138400164654 /* Debug */ = {
+		F1FC171521BB1C4C00FDEDE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -413,7 +429,7 @@
 			};
 			name = Debug;
 		};
-		F124486B21AD138400164654 /* Release */ = {
+		F1FC171621BB1C4C00FDEDE5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -437,34 +453,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F124484421AD138200164654 /* Build configuration list for PBXProject "ShutterTool" */ = {
+		F1FC16ED21BB1C4A00FDEDE5 /* Build configuration list for PBXProject "ShutterTool" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F124486421AD138400164654 /* Debug */,
-				F124486521AD138400164654 /* Release */,
+				F1FC170F21BB1C4C00FDEDE5 /* Debug */,
+				F1FC171021BB1C4C00FDEDE5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F124486621AD138400164654 /* Build configuration list for PBXNativeTarget "ShutterTool" */ = {
+		F1FC171121BB1C4C00FDEDE5 /* Build configuration list for PBXNativeTarget "ShutterTool" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F124486721AD138400164654 /* Debug */,
-				F124486821AD138400164654 /* Release */,
+				F1FC171221BB1C4C00FDEDE5 /* Debug */,
+				F1FC171321BB1C4C00FDEDE5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F124486921AD138400164654 /* Build configuration list for PBXNativeTarget "ShutterToolTests" */ = {
+		F1FC171421BB1C4C00FDEDE5 /* Build configuration list for PBXNativeTarget "ShutterToolTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F124486A21AD138400164654 /* Debug */,
-				F124486B21AD138400164654 /* Release */,
+				F1FC171521BB1C4C00FDEDE5 /* Debug */,
+				F1FC171621BB1C4C00FDEDE5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F124484121AD138200164654 /* Project object */;
+	rootObject = F1FC16EA21BB1C4A00FDEDE5 /* Project object */;
 }
