@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		F17E2B4221C4DB71003E615B /* LocationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17E2B4121C4DB71003E615B /* LocationsController.swift */; };
+		F17E2B4421C4DC13003E615B /* ExposureCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17E2B4321C4DC13003E615B /* ExposureCalculator.swift */; };
 		F1B27BAE21C335A3006C90BA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B27BAD21C335A3006C90BA /* TabBarController.swift */; };
+		F1B85DC621C8A8A2006784E5 /* LocationData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F1B85DC421C8A8A2006784E5 /* LocationData.xcdatamodeld */; };
+		F1DE5AA621C749B4004BB6D1 /* FractionConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DE5AA521C749B3004BB6D1 /* FractionConverter.swift */; };
 		F1FC16F621BB1C4A00FDEDE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FC16F521BB1C4A00FDEDE5 /* AppDelegate.swift */; };
 		F1FC16F821BB1C4A00FDEDE5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FC16F721BB1C4A00FDEDE5 /* HomeViewController.swift */; };
 		F1FC16FA21BB1C4A00FDEDE5 /* ShutterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FC16F921BB1C4A00FDEDE5 /* ShutterViewController.swift */; };
@@ -31,7 +34,10 @@
 
 /* Begin PBXFileReference section */
 		F17E2B4121C4DB71003E615B /* LocationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsController.swift; sourceTree = "<group>"; };
+		F17E2B4321C4DC13003E615B /* ExposureCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExposureCalculator.swift; sourceTree = "<group>"; };
 		F1B27BAD21C335A3006C90BA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		F1B85DC521C8A8A2006784E5 /* LocationData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LocationData.xcdatamodel; sourceTree = "<group>"; };
+		F1DE5AA521C749B3004BB6D1 /* FractionConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FractionConverter.swift; sourceTree = "<group>"; };
 		F1FC16F221BB1C4A00FDEDE5 /* ShutterTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShutterTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1FC16F521BB1C4A00FDEDE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1FC16F721BB1C4A00FDEDE5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -64,9 +70,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F17E2B4521C4DC32003E615B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F1FC16F721BB1C4A00FDEDE5 /* HomeViewController.swift */,
+				F1FC16F921BB1C4A00FDEDE5 /* ShutterViewController.swift */,
+				F1FC171721BB1CE400FDEDE5 /* MyLocationsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F17E2B4621C4DC6B003E615B /* DataManagers */ = {
+			isa = PBXGroup;
+			children = (
+				F17E2B4121C4DB71003E615B /* LocationsController.swift */,
+				F17E2B4321C4DC13003E615B /* ExposureCalculator.swift */,
+				F1DE5AA521C749B3004BB6D1 /* FractionConverter.swift */,
+				F1B85DC421C8A8A2006784E5 /* LocationData.xcdatamodeld */,
+			);
+			path = DataManagers;
+			sourceTree = "<group>";
+		};
 		F1FC16E921BB1C4A00FDEDE5 = {
 			isa = PBXGroup;
 			children = (
+				F17E2B4621C4DC6B003E615B /* DataManagers */,
+				F17E2B4521C4DC32003E615B /* ViewControllers */,
 				F1FC16F421BB1C4A00FDEDE5 /* ShutterTool */,
 				F1FC170B21BB1C4C00FDEDE5 /* ShutterToolTests */,
 				F1FC16F321BB1C4A00FDEDE5 /* Products */,
@@ -86,10 +115,6 @@
 			isa = PBXGroup;
 			children = (
 				F1FC16F521BB1C4A00FDEDE5 /* AppDelegate.swift */,
-				F1FC16F721BB1C4A00FDEDE5 /* HomeViewController.swift */,
-				F17E2B4121C4DB71003E615B /* LocationsController.swift */,
-				F1FC16F921BB1C4A00FDEDE5 /* ShutterViewController.swift */,
-				F1FC171721BB1CE400FDEDE5 /* MyLocationsViewController.swift */,
 				F1B27BAD21C335A3006C90BA /* TabBarController.swift */,
 				F1FC16FB21BB1C4A00FDEDE5 /* Main.storyboard */,
 				F1FC16FE21BB1C4C00FDEDE5 /* Assets.xcassets */,
@@ -209,12 +234,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1DE5AA621C749B4004BB6D1 /* FractionConverter.swift in Sources */,
 				F1FC16FA21BB1C4A00FDEDE5 /* ShutterViewController.swift in Sources */,
 				F1FC16F621BB1C4A00FDEDE5 /* AppDelegate.swift in Sources */,
 				F17E2B4221C4DB71003E615B /* LocationsController.swift in Sources */,
 				F1FC16F821BB1C4A00FDEDE5 /* HomeViewController.swift in Sources */,
 				F1B27BAE21C335A3006C90BA /* TabBarController.swift in Sources */,
 				F1FC171821BB1CE400FDEDE5 /* MyLocationsViewController.swift in Sources */,
+				F1B85DC621C8A8A2006784E5 /* LocationData.xcdatamodeld in Sources */,
+				F17E2B4421C4DC13003E615B /* ExposureCalculator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +509,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F1B85DC421C8A8A2006784E5 /* LocationData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F1B85DC521C8A8A2006784E5 /* LocationData.xcdatamodel */,
+			);
+			currentVersion = F1B85DC521C8A8A2006784E5 /* LocationData.xcdatamodel */;
+			path = LocationData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F1FC16EA21BB1C4A00FDEDE5 /* Project object */;
 }
