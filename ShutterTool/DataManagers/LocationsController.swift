@@ -15,6 +15,7 @@ class LocationsController {
     let userDefaults = UserDefaults.standard
     final let userDefaultsKey = "MyLocations"
     var myLocations: [NSManagedObject] = []
+    var deletedLocations: [NSManagedObject] = []
     
     
     /* Saving and Modifying the MyLocations in CoreData */
@@ -70,27 +71,27 @@ class LocationsController {
         } catch {
             print("error : \(error)")
         }
-        
+    
         // remove from local location array
+        deletedLocations.append(myLocations[indexPath.row])
         myLocations.remove(at: indexPath.row)
     }
     
     func editLocation(indexPath: IndexPath){
         // change in CoreData
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
-        
-        let managedContext = appDelegate.persistentContainer.viewContext
-        
-        let location = 
-        
-        managedContext.delete(myLocations[indexPath.row])
-        do {
-            try managedContext.save()
-        } catch {
-            print("error : \(error)")
-        }
+//        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+//            return
+//        }
+//
+//        let managedContext = appDelegate.persistentContainer.viewContext
+//
+//        let location =
+//
+//        do {
+//            try managedContext.save()
+//        } catch {
+//            print("error : \(error)")
+//        }
         
         // change in local array
     }
@@ -116,9 +117,10 @@ class LocationsController {
             point.title = object.value(forKeyPath: "name") as? String ?? ""
             point.coordinate.latitude = object.value(forKey: "latitude") as? Double ?? 0.0
             point.coordinate.longitude = object.value(forKey: "longitude") as? Double ?? 0.0
+            mapView.addAnnotation(point)
         }
     }
-    
+        
     func getLocationName(indexPath: IndexPath) -> String {
         return myLocations[indexPath.row].value(forKeyPath: "name") as? String ?? ""
     }

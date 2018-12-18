@@ -36,6 +36,12 @@ class HomeViewController: UIViewController {
         locationController.addSavedLocationsToMapView(mapView: mapView)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        let allAnnotations = self.mapView.annotations
+        self.mapView.removeAnnotations(allAnnotations)
+        locationController.addSavedLocationsToMapView(mapView: mapView)
+    }
+    
     /* LOCATION FUNCTIONS */
     @IBAction func centerLocationButtonPressed(_ sender: Any) {
         centerMapOnUserLocation()

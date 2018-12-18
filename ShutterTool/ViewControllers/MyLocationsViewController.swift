@@ -19,13 +19,19 @@ class MyLocationsViewController: UIViewController, UITableViewDataSource, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.MyLocationsTable.backgroundColor = .black
         locationsController.loadFromCoreData()
     }
-
-    /* Table View Functions */
+    
     override func viewWillAppear(_ animated: Bool) {
         locationsController.loadFromCoreData()
         MyLocationsTable.reloadData()
+    }
+
+    /* Table View Functions */
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = .black
+        cell.textLabel?.textColor = .white
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
