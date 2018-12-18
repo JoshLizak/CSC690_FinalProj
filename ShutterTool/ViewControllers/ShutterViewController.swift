@@ -16,6 +16,7 @@ class ShutterViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     @IBOutlet weak var newShutter: UITextField!
     @IBOutlet weak var newAperture: UITextField!
     @IBOutlet weak var newISO: UITextField!
+    @IBOutlet weak var calculateButton: UIButton!
     
     @IBAction func calculateButton(_ sender: Any) {
         //Check Form Validation
@@ -50,6 +51,7 @@ class ShutterViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        calculateButton.layer.cornerRadius = 10
     }
     
     // Variables

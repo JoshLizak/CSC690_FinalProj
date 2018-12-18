@@ -15,6 +15,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var locationButton: UIButton!
     @IBOutlet weak var saveLocationButton: UIButton!
+    @IBOutlet weak var NearbyTableView: UITableView!
     
     /* Variables */
     let locationManager = CLLocationManager()
@@ -31,7 +32,8 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         checkLocationAvaliable()
         centerMapOnUserLocation()
-        saveLocationButton.layer.cornerRadius = 5
+        saveLocationButton.layer.cornerRadius = 6
+        NearbyTableView.layer.cornerRadius = 10
         locationController.loadFromCoreData()
         locationController.addSavedLocationsToMapView(mapView: mapView)
     }
@@ -91,12 +93,12 @@ class HomeViewController: UIViewController {
     }
     
     func centerMapOnUserLocation() {
-        if let location = locationManager.location?.coordinate {
+        if var location = locationManager.location?.coordinate {
+            location.latitude -= 0.003
             let region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionMeters, longitudinalMeters: regionMeters)
             mapView.setRegion(region, animated: true)
         }
     }
-    
     
     /* Error Dialogue */
     func errorDialogue(title: String, message: String){
@@ -133,10 +135,11 @@ class HomeViewController: UIViewController {
 extension HomeViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
         if showCurrentLocation {
-            guard let location = locations.last else { return }
-            let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-            let region  = MKCoordinateRegion.init(center: center, latitudinalMeters: regionMeters, longitudinalMeters: regionMeters)
-            mapView.setRegion(region, animated: true)
+            centerMapOnUserLocation()
+//            guard let location = locations.last else { return }
+//            let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+//            let region  = MKCoordinateRegion.init(center: center, latitudinalMeters: regionMeters, longitudinalMeters: regionMeters)
+//            mapView.setRegion(region, animated: true)
         }
     }
     
