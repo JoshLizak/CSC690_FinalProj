@@ -10,8 +10,9 @@ import UIKit
 
 class MyLocationsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var EditButton: UIBarButtonItem!
     @IBOutlet weak var MyLocationsTable: UITableView!
-    let locationsController = LocationsController()
+    let savedLocationManager = SavedLocationManager()
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent // .default
@@ -20,11 +21,11 @@ class MyLocationsViewController: UIViewController, UITableViewDataSource, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         self.MyLocationsTable.backgroundColor = .black
-        locationsController.loadFromCoreData()
+        savedLocationManager.loadFromCoreData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        locationsController.loadFromCoreData()
+        savedLocationManager.loadFromCoreData()
         MyLocationsTable.reloadData()
     }
 
@@ -35,32 +36,40 @@ class MyLocationsViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return locationsController.myLocations.count
+        return myLocations.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "locationCell")
-        cell.textLabel?.text = locationsController.getLocationName(indexPath: indexPath)
+        cell.textLabel?.text = savedLocationManager.getLocationName(indexPath: indexPath)
         return cell
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete{
-            locationsController.deleteLocation(indexPath: indexPath)
+            savedLocationManager.deleteLocation(indexPath: indexPath)
             MyLocationsTable.reloadData()
         }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-//        taskSelectedDialogue(taskName: tasker.getToDoList()[indexPath.row], indexPath: indexPath )
-        
+        selectedIndex = indexPath.row
+        performSegue(withIdentifier: "segue", sender: self)
         tableView.deselectRow(at: indexPath, animated: true)
         self.MyLocationsTable.reloadData()
     }
     
-    /* Dialogues */
-    func selectedItemDialogue(indexPath: IndexPath){
-        //Edit item
+    @IBAction func EditButtonPressed(_ sender: Any) {
+        if EditButton.title == "Edit" {
+            print("Edit pressed")
+
+            EditButton.title = "Done"
+            MyLocationsTable.setEditing(true, animated: true)
+        } else {
+            EditButton.title = "Edit"
+            MyLocationsTable.setEditing(false, animated: true)
+
+        }
+        
     }
 }
