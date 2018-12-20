@@ -50,9 +50,7 @@ class SavedLocationManager {
         }
         
         let managedContext = appDelegate.persistentContainer.viewContext
-        
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Location")
-        
         do {
             myLocations = try managedContext.fetch(fetchRequest)
         } catch let error as NSError {
@@ -88,7 +86,6 @@ class SavedLocationManager {
         }
         
         let managedContext = appDelegate.persistentContainer.viewContext
-        
         managedContext.delete(myLocations[indexPath.row])
         do {
             try managedContext.save()
@@ -122,7 +119,6 @@ class SavedLocationManager {
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
         }
-        
     }
     
     func saveNewLocation(locationManager: CLLocationManager, mapView: MKMapView, name: String, notes: String) {
@@ -134,7 +130,6 @@ class SavedLocationManager {
         
         // add point to the map
         mapView.addAnnotation(pinForUserLocation)
-        mapView.showAnnotations([pinForUserLocation], animated: false)
         
         // save data to disk
         saveToCoreData(point: pinForUserLocation, name: name, notes: notes)

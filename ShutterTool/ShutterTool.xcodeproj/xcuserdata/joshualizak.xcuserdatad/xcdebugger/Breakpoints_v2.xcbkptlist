@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ViewControllers/SavedLocationViewController.swift"
-            timestampString = "566981924.2223949"
+            timestampString = "566997133.178638"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "readData()"
             landmarkType = "7">
          </BreakpointContent>

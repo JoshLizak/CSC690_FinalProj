@@ -19,11 +19,13 @@ class SavedLocationViewController: UIViewController {
     @IBOutlet weak var DirectionsButton: UIButton!
     @IBOutlet weak var EditButton: UIBarButtonItem!
     @IBOutlet weak var MapView: MKMapView!
+    @IBOutlet weak var ChangeNameButton: UIBarButtonItem!
     
     var name: String = ""
     var latitude: Double = 0.0
     var longitude: Double = 0.0
     var notes: String = ""
+    var color: UIColor? = .black
     
     override func viewDidLoad() {
         DirectionsButton.layer.cornerRadius = 10
@@ -33,6 +35,9 @@ class SavedLocationViewController: UIViewController {
         LatitudeTextBar.text = String(latitude)
         LongitudeTextBar.text = String(longitude)
         NotesTextBox.text = notes
+        color = ChangeNameButton.tintColor
+        ChangeNameButton.isEnabled = false
+        ChangeNameButton.tintColor = .black
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -84,6 +89,10 @@ class SavedLocationViewController: UIViewController {
             NotesTextBox.backgroundColor = .white
             NotesTextBox.textColor = .black
             
+            ChangeNameButton.isEnabled = true
+            ChangeNameButton.tintColor = color
+        
+                        
         } else {
             // finished editing
             EditButton.title = "Edit"
@@ -100,6 +109,9 @@ class SavedLocationViewController: UIViewController {
             NotesTextBox.backgroundColor = .black
             NotesTextBox.textColor = .white
             
+            ChangeNameButton.isEnabled = false
+            ChangeNameButton.tintColor = .black
+            
             name = NavigationBar.title ?? "error"
             latitude = Double(LatitudeTextBar.text!) ?? 0.0
             longitude = Double(LongitudeTextBar.text!) ?? 0.0
@@ -107,6 +119,36 @@ class SavedLocationViewController: UIViewController {
             
             savedLocationManager.editLocation(selectedIndex: selectedIndex, name: name, notes: notes, latitude: latitude, longitude: longitude)
         }
+    }
+    
+    @IBAction func ChangeNamePressed(_ sender: Any) {
+        changeNameDialogue()
+        
+    }
+    
+    func changeNameDialogue() {
+        let alertController = UIAlertController(title: name, message: "Change name of location.", preferredStyle: .alert)
+        
+        let confirmAction = UIAlertAction(title: "Enter", style: .default) { (_) in
+            let name = (alertController.textFields?[0].text)
+            if name?.count == 0 {
+                self.changeNameDialogue()
+            } else {
+                self.name = name!
+                self.NavigationBar.title = self.name
+            }
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (_) in }
+        
+        alertController.addTextField { (textField) in
+            textField.placeholder = self.name
+        }
+        
+        alertController.addAction(confirmAction)
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true, completion: nil)
     }
     
 }

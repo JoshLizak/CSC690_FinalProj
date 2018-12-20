@@ -392,13 +392,22 @@
                         <viewLayoutGuide key="safeArea" id="lo9-Ht-1f4"/>
                     </view>
                     <navigationItem key="navigationItem" title="Location" id="uR4-Nh-FK4">
-                        <barButtonItem key="rightBarButtonItem" title="Edit" id="lEw-hR-EPT">
-                            <connections>
-                                <action selector="EditButtonPressed:" destination="jlg-VJ-xKr" id="onO-YD-nMZ"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Edit" id="lEw-hR-EPT">
+                                <connections>
+                                    <action selector="EditButtonPressed:" destination="jlg-VJ-xKr" id="onO-YD-nMZ"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Change Name" id="Ms3-YE-VJq">
+                                <color key="tintColor" name="controlAccentColor" catalog="System" colorSpace="catalog"/>
+                                <connections>
+                                    <action selector="ChangeNamePressed:" destination="jlg-VJ-xKr" id="Lkz-ND-ZKD"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="ChangeNameButton" destination="Ms3-YE-VJq" id="zJJ-fv-PWY"/>
                         <outlet property="DirectionsButton" destination="SdY-BK-h7K" id="9sF-OB-pLv"/>
                         <outlet property="EditButton" destination="lEw-hR-EPT" id="poS-6n-tyj"/>
                         <outlet property="LatitudeTextBar" destination="DXO-OE-d3W" id="Wbw-aW-j1I"/>

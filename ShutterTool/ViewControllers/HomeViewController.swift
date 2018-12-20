@@ -50,6 +50,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let allAnnotations = self.mapView.annotations
         self.mapView.removeAnnotations(allAnnotations)
         savedLocationManager.addSavedLocationsToMapView(mapView: mapManager.mapView)
+        
         savedLocationManager.filterNearbyLocations(locationManager: mapManager.locationManager)
         NearbyTableView.reloadData()
     }
@@ -72,7 +73,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let locationObject = myLocations[indexPath.row]
+        let locationObject = nearbyLocations[indexPath.row]
         let point = MKPointAnnotation()
         point.coordinate.latitude = locationObject.value(forKey: "latitude") as? Double ?? 0.0
         point.coordinate.longitude = locationObject.value(forKey: "longitude") as? Double ?? 0.0
@@ -112,6 +113,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 self.newLocationDialogue()
             } else {
                 savedLocationManager.saveNewLocation(locationManager: self.mapManager.locationManager, mapView: self.mapView, name: locationName!, notes: locationNotes!)
+                savedLocationManager.filterNearbyLocations(locationManager: self.mapManager.locationManager)
+                self.NearbyTableView.reloadData()
             }
         }
         
