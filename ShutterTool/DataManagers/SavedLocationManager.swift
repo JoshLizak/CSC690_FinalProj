@@ -9,10 +9,19 @@
 import Foundation
 import MapKit
 import CoreData
+import FirebaseDatabase
 
 var myLocations: [NSManagedObject] = []
+var allLocations: [NSManagedObject] = []
 var nearbyLocations: [NSManagedObject] = []
 var selectedIndex: Int = 0
+
+struct LocationStruct: Decodable{
+    let name: String
+    let notes: String
+    let latitude: Double
+    let longitude: Double
+}
 
 class SavedLocationManager {
     
@@ -22,6 +31,7 @@ class SavedLocationManager {
     
     /* Acessing MyLocations in CoreData */
     func saveToCoreData(point: MKPointAnnotation, name: String, notes: String) {
+        
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
         }
@@ -35,7 +45,7 @@ class SavedLocationManager {
         location.setValue(notes, forKey: "notes")
         location.setValue(point.coordinate.latitude, forKey: "latitude")
         location.setValue(point.coordinate.longitude, forKey: "longitude")
-
+        
         do {
             try managedContext.save()
             myLocations.append(location)
@@ -43,6 +53,42 @@ class SavedLocationManager {
             print("Could not save. \(error), \(error.userInfo)")
         }
     }
+    
+//    func saveToFirebase(index: Int){
+//        let ref = Database.database().reference()
+//        let databaseSize = ref.
+//        let locationObject = myLocations[index]
+//        let name = locationObject.value(forKey: "name")
+//        let notes = locationObject.value(forKey: "notes")
+//        let latitude = locationObject.value(forKey: "latitude")
+//        let longitude = locationObject.value(forKey: "longitude")
+////        ref.child("locations").child(databaseSize).setValue(["name": name, "notes": notes, "latitude": latitude, "longitude": longitude])
+//        ref.child("locations").setValue(["name": name, "notes": notes, "latitude": latitude, "longitude": longitude], forKeyPath: databaseSize)
+////        ref.child("locations").childByAutoID().setValue(["name": name, "notes": notes, "latitude": latitude, "longitude": longitude])
+//    }
+//
+//    func loadFromFirebase(){
+//        let ref = Database.database().reference().child("locations")
+//        ref.observeSingleEvent(of: .value) { (snapshot) in
+//            print(snapshot.value)
+//            do {
+//                let myLocation = try JSONDecoder().decode(LocationStruct.self, from: snapshot.value as! Data)
+//                print(myLocation.name)
+//            } catch let jsonErr {
+//                print("Error reading JSON.", jsonErr)
+//            }
+//        }
+    
+        
+//        ref.child("location").observeSingleEvent(of: .value) { (snapshot) in
+//            let locationObject = snapshot.chi
+//
+//            for object in snapshot.children{
+//                l
+//
+//            }
+//        }
+//    }
     
     func loadFromCoreData() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {

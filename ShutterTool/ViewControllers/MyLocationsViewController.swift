@@ -12,6 +12,9 @@ class MyLocationsViewController: UIViewController, UITableViewDataSource, UITabl
     
     @IBOutlet weak var EditButton: UIBarButtonItem!
     @IBOutlet weak var MyLocationsTable: UITableView!
+    @IBOutlet weak var DataSourceButton: UIBarButtonItem!
+    @IBOutlet weak var NavigationBar: UINavigationItem!
+    
     let savedLocationManager = SavedLocationManager()
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -72,4 +75,16 @@ class MyLocationsViewController: UIViewController, UITableViewDataSource, UITabl
         }
         
     }
+    
+    @IBAction func DataSourceButtonPressed(_ sender: Any) {
+        if NavigationBar.title == "My Locations" {
+            NavigationBar.title = "All Locations"
+
+        } else {
+            NavigationBar.title = "My Locations"
+
+        }
+        
+    }
+    
 }
