@@ -17,6 +17,8 @@ class MyLocationsViewController: UIViewController, UITableViewDataSource, UITabl
     
     let savedLocationManager = SavedLocationManager()
     
+    var selectedTable: String = "My Locations"
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent // .default
     }
@@ -39,6 +41,8 @@ class MyLocationsViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        if selectedTable
+        
         return myLocations.count
     }
     
